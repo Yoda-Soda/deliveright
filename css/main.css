@@ -1,8 +1,120 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #6578e7;
+  --secondary-color: #fb8400;
 }
 
 body {
-  margin: 0;
   font-family: "Montserrat", sans-serif;
+  width: 100vw;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: white;
+}
+
+/* remove navigation menu while in mobile and not open */
+.menu-list {
+  display: none;
+}
+
+.menu-list {
+  background-color: white;
+  list-style: none;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+.menu-list li a:hover {
+  color: white;
+}
+.menu-list li:hover {
+  background-color: var(--secondary-color);
+}
+
+.menu-list li {
+  width: 100vw;
+  padding: 20px;
+}
+
+.menu-list.open {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 6em;
+}
+
+/* burger icon ...*/
+
+.menu-btn {
+  margin-top: 4px;
+  height: 3px;
+  width: 27px;
+  background: white;
+  border-radius: 1px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn::before,
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  border-radius: 1px;
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn::before {
+  width: 16px;
+  transform: translate(11px, 7px);
+}
+.menu-btn::after {
+  width: 10px;
+  transform: translate(17px, 14px);
+}
+
+/* animate burger icon */
+
+.menu-btn.open {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  width: 27px;
+  margin-top: 6px;
+}
+.menu-btn.open::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  width: 27px;
+  margin-top: 6px;
+}
+
+/* ...burger icon */
+
+header {
+  margin: 0px;
+  padding: 2.7rem;
+}
+
+header,
+.calltoaction {
+  background-color: var(--main-color);
 }

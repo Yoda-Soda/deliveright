@@ -12,15 +12,22 @@ A design has been consigned to be turned into a functional web site using HTML a
 
 ## Setup
 
-All files will need to be moved into the root directory of the domain wherever it's been hosted.
+All files will need to be moved into the root directory of the domain wherever it's needs to be hosted.
 
-A simple `git clone git@github.com:Yoda-Soda/deliveright.git` would pull the site to the required directory.
+A simple `git clone git@github.com:Yoda-Soda/deliveright.git` will pull the site to the required directory.
+
+## Design
+
+![Untitled-2 copy (1)](https://user-images.githubusercontent.com/25014150/118412744-d4e2bb80-b6ef-11eb-8883-cdcfbfed57ef.png)
 
 ## Design Notes
 
 The site has been designed and developed to be responsive.
 
+## Demo
+[live view of site](https://deliveright.janclaasen.me/)
+
 ## Credits
 
-Design: CloudCannon Ltd
-HTML & CSS: Jan Claasen @Yoda-Soda
+* Design: CloudCannon Ltd
+* HTML & CSS: Jan Claasen @Yoda-Soda

@@ -179,9 +179,9 @@ header,
 
 .calltoaction img {
   grid-area: call_to_action_image;
-  width: 100vw;
+  width: 90vw;
+  margin: 15vw auto;
   padding: 0;
-  margin: 0;
 }
 
 .btn:hover {
@@ -263,14 +263,14 @@ p {
   color: var(--dark-gray-font-color);
 }
 
-/* break point for tables */
+/* break point for tablets */
 @media only screen and (min-width: 768px) {
   .calltoaction {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto 53vw;
     grid-template-areas:
-      "call_to_action   call_to_action_paragraph"
-      "call_to_action   buttons"
+      "call_to_action       call_to_action_paragraph"
+      "call_to_action       buttons"
       "call_to_action_image call_to_action_image";
   }
   .btn-section {
@@ -284,28 +284,35 @@ p {
     border: 1px solid white;
     font-size: 0.8em;
     color: white;
-    padding: 0.7em;
-    width: 150px;
-    height: 2.9em;
+    padding: 1em 1.8em;
+    width: auto;
+    height: 3.3em;
     text-align: center;
     margin: 0 0.4em;
+    z-index: 2;
   }
 
   .btn:hover {
     border-color: var(--secondary-color);
     background-color: var(--main-color);
+    color: var(--secondary-color);
   }
 
   .btn-primary {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
   }
+  .btn-primary:hover {
+    background-color: var(--main-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
 
   .calltoaction p {
     display: block;
     color: white;
     width: 50vw;
-    padding: 4em 1em 0 1em;
+    padding: 4em 8em 0 1em;
     font-size: 0.9em;
   }
   .calltoaction h1 {
@@ -314,14 +321,14 @@ p {
 
   .calltoaction img {
     width: 100vw;
-    padding: 0;
-    margin: 0;
+    padding: 2em;
+    margin: 10vw auto;
     position: relative;
     top: -100px;
   }
 
   .features {
-    margin-top: 8em;
+    margin-top: 20vw;
     padding: 2em;
   }
 
@@ -344,5 +351,44 @@ p {
     margin: 0.5em;
     padding: 1.4em;
     width: calc((100vw - 6em) / 3);
+  }
+}
+
+/* break point for full screen browser */
+@media only screen and (min-width: 1080px) {
+  .calltoaction {
+    grid-template-columns: 35vw 65vw;
+    grid-template-rows: 10em 7em 12em;
+    grid-template-areas:
+      "call_to_action               call_to_action_image"
+      "call_to_action_paragraph     call_to_action_image"
+      "buttons                      call_to_action_image";
+  }
+
+  .calltoaction img {
+    max-width: 38em;
+    justify-items: start;
+    padding: 1em;
+    margin: 12em auto 0 7vw;
+    padding: 0;
+  }
+
+  .btn-section {
+    justify-items: center;
+    padding: 0.8em 0 4em 4vw;
+    margin-left: 2vw;
+  }
+
+  .calltoaction p {
+    font-size: 0.7em;
+    max-width: 63ch;
+    padding: 4em 6em 0em 5vw;
+    margin-left: 2vw;
+  }
+
+  .calltoaction h1 {
+    padding: 1em 0em 0em 5vw;
+    font-size: 2.5em;
+    margin-left: 2vw;
   }
 }

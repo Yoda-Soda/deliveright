@@ -8,6 +8,8 @@
   --main-color: #6578e7;
   --secondary-color: #fb8400;
   --gray-color: #6b6b6b;
+  --gray-light-color: #a2a2a2;
+  --dark-gray-font-color: #050508;
 }
 
 body {
@@ -133,10 +135,11 @@ header,
 
 .calltoaction h1 {
   grid-area: call_to_action;
+  width: 14ch;
   color: white;
   font-weight: 700;
   font-size: 2.2em;
-  padding: 0.3em 1.5em 0em 1.5em;
+  padding: 0.3em 0em 0em 1.5em;
   background-color: var(--main-color);
 }
 
@@ -146,12 +149,12 @@ header,
 
 .btn-section {
   background-color: white;
-  padding-top: 4.3em;
+  padding-top: 18vw;
 }
 
 .btn {
   background-color: white;
-  padding: 0.9em;
+  padding: 1em;
   border-radius: 2.8em;
   border: 1px solid var(--gray-color);
   text-decoration: none;
@@ -183,4 +186,74 @@ header,
 
 .btn-primary:hover {
   background-color: #f39d3b;
+}
+
+/* feature grid */
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "heading"
+    "paragraph"
+    "arrow"
+    "food-card"
+    "scooter-card"
+    "review-card";
+}
+
+h2 {
+  grid-area: heading;
+  font-size: 2rem;
+  margin: 1em;
+  width: 10ch;
+  line-height: 1.4em;
+  color: var(--dark-gray-font-color);
+}
+
+p {
+  grid-area: paragraph;
+  padding: 0 2.3em;
+  width: 90vw;
+  color: var(--gray-light-color);
+  font-weight: 500;
+  line-height: 1.8em;
+}
+
+.arrow-btn {
+  grid-area: arrow;
+  background-color: var(--secondary-color);
+  width: 90px;
+  border-radius: 100px;
+  padding: 1em;
+  margin: 2em auto;
+}
+
+.card-feature:nth-child(1) {
+  grid-area: food-card;
+}
+
+.card-feature:nth-child(2) {
+  grid-area: scooter-card;
+}
+.card-feature:nth-child(3) {
+  grid-area: review-card;
+}
+
+.card-feature {
+  width: 100vw;
+  padding: 3em;
+  box-shadow: rgba(46, 93, 221, 0.2) 0px 18px 50px -10px;
+  border-radius: 30px;
+}
+
+.card-feature img {
+  width: 100%;
+  padding: 1em;
+}
+
+.card-feature h3 {
+  text-align: center;
+  color: var(--dark-gray-font-color);
 }

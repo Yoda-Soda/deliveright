@@ -375,20 +375,19 @@ p {
 
   .btn-section {
     justify-items: center;
-    padding: 0.8em 0 4em 4vw;
-    margin-left: 2vw;
+    padding: 0.8em 0 4em 3vw;
+    margin: 1em 0 0 2vw;
   }
 
   .calltoaction p {
     font-size: 0.7em;
     max-width: 63ch;
-    padding: 4em 6em 0em 5vw;
-    margin-left: 2vw;
+    padding: 5em 6em 0em 5vw;
   }
 
   .calltoaction h1 {
-    padding: 1em 0em 0em 5vw;
-    font-size: 2.5em;
-    margin-left: 2vw;
+    width: 500px;
+    padding: 1em 0 0 5vw;
+    font-size: 2.6em;
   }
 }

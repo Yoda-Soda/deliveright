@@ -357,7 +357,7 @@ p {
 /* break point for full screen browser */
 @media only screen and (min-width: 1080px) {
   .calltoaction {
-    grid-template-columns: auto 440px 65vw auto;
+    grid-template-columns: auto 440px 60vw auto;
     grid-template-rows: 10em 7em 12em;
     grid-template-areas:
       ".    call_to_action               call_to_action_image   ."
@@ -366,10 +366,10 @@ p {
   }
 
   .calltoaction img {
-    max-width: 38em;
+    max-width: 33em;
     justify-items: start;
     padding: 1em;
-    margin: 13em auto 0 7vw;
+    margin: 16em auto 0 7vw;
     padding: 0;
   }
 

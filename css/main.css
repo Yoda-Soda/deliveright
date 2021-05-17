@@ -357,12 +357,12 @@ p {
 /* break point for full screen browser */
 @media only screen and (min-width: 1080px) {
   .calltoaction {
-    grid-template-columns: 35vw 65vw;
+    grid-template-columns: auto 440px 65vw auto;
     grid-template-rows: 10em 7em 12em;
     grid-template-areas:
-      "call_to_action               call_to_action_image"
-      "call_to_action_paragraph     call_to_action_image"
-      "buttons                      call_to_action_image";
+      ".    call_to_action               call_to_action_image   ."
+      ".    call_to_action_paragraph     call_to_action_image   ."
+      ".    buttons                      call_to_action_image   .";
   }
 
   .calltoaction img {

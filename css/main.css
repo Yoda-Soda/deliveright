@@ -26,6 +26,7 @@ header {
   font-weight: 700;
   font-size: 1.5em;
   color: white;
+  margin-left: 3vw;
 }
 
 /* remove navigation menu while in mobile and not open */
@@ -136,7 +137,7 @@ header,
 
 .calltoaction h1 {
   grid-area: call_to_action;
-  width: 14ch;
+  width: 15ch;
   color: white;
   font-weight: 700;
   font-size: 2.2em;
@@ -145,6 +146,7 @@ header,
 }
 
 .calltoaction p {
+  grid-area: call_to_action_paragraph;
   display: none;
 }
 
@@ -259,4 +261,88 @@ p {
 .card-feature h3 {
   text-align: center;
   color: var(--dark-gray-font-color);
+}
+
+/* break point for tables */
+@media only screen and (min-width: 768px) {
+  .calltoaction {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 53vw;
+    grid-template-areas:
+      "call_to_action   call_to_action_paragraph"
+      "call_to_action   buttons"
+      "call_to_action_image call_to_action_image";
+  }
+  .btn-section {
+    background-color: var(--main-color);
+    padding-top: 0;
+    display: flex;
+  }
+
+  .btn {
+    background-color: var(--main-color);
+    border: 1px solid white;
+    font-size: 0.8em;
+    color: white;
+    padding: 0.7em;
+    width: 150px;
+    height: 2.9em;
+    text-align: center;
+    margin: 0 0.4em;
+  }
+
+  .btn:hover {
+    border-color: var(--secondary-color);
+    background-color: var(--main-color);
+  }
+
+  .btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
+
+  .calltoaction p {
+    display: block;
+    color: white;
+    width: 50vw;
+    padding: 4em 1em 0 1em;
+    font-size: 0.9em;
+  }
+  .calltoaction h1 {
+    padding: 1.5em 0 1.5em 2em;
+  }
+
+  .calltoaction img {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -100px;
+  }
+
+  .features {
+    margin-top: 8em;
+    padding: 2em;
+  }
+
+  .features h2 {
+    width: 30ch;
+  }
+  .features {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-areas:
+      "heading      heading         heading"
+      "paragraph    paragraph       paragraph"
+      "arrow        arrow           arrow"
+      "food-card    scooter-card    review-card";
+  }
+  .card-feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0.5em;
+    padding: 1.4em;
+    width: calc((100vw - 6em) / 3);
+  }
 }

@@ -369,7 +369,7 @@ p {
     max-width: 38em;
     justify-items: start;
     padding: 1em;
-    margin: 12em auto 0 7vw;
+    margin: 13em auto 0 7vw;
     padding: 0;
   }
 
@@ -389,5 +389,125 @@ p {
     width: 500px;
     padding: 1em 0 0 5vw;
     font-size: 2.6em;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-list {
+    background-color: unset;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    justify-items: center;
+    margin-right: 10vw;
+  }
+
+  .menu-list li {
+    width: auto;
+  }
+
+  .menu-list li a {
+    color: white;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  #logo {
+    margin-top: 15px;
+  }
+
+  #login {
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+    padding: 0.8em 1.7em;
+    border: 1px solid var(--secondary-color);
+  }
+
+  .menu-list li:hover {
+    background-color: unset;
+  }
+
+  .menu-list li > a:hover {
+    box-shadow: 0 6px 0 0 var(--secondary-color);
+    padding-bottom: 4px;
+    opacity: 1;
+  }
+
+  #login:hover {
+    background-color: unset;
+    box-shadow: unset;
+    opacity: unset;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+  }
+  .features {
+    padding: 3em 0em;
+    margin: 2.5em 3.4vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "heading    food-card   scooter-card    review-card"
+      "paragraph  food-card   scooter-card    review-card"
+      "arrow      food-card   scooter-card    review-card";
+  }
+
+  .card-feature {
+    max-width: 20vw;
+    margin: 1em;
+    padding: 2.6em 1em;
+    box-shadow: rgba(46, 93, 221, 0.1) 0px 18px 50px -10px;
+    border-radius: 30px;
+  }
+
+  .card-feature img {
+    width: 90%;
+    padding: 2em 0;
+  }
+
+  .card-feature h3 {
+    text-align: left;
+    font-size: 0.9em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    width: 200px;
+    line-height: 1.4em;
+  }
+
+  .features p {
+    padding: 0 2em;
+    width: 20vw;
+    font-weight: 500;
+    font-size: 0.8em;
+    line-height: 2em;
+    position: relative;
+    top: -17vw;
+  }
+
+  .arrow-btn {
+    grid-area: arrow;
+    background-color: var(--secondary-color);
+    width: 50px;
+    border-radius: 100px;
+    padding: 0.8em;
+    margin: 2em;
+    position: relative;
+    top: -17vw;
+  }
+  .features h2 {
+    width: 10ch;
+  }
+
+  .card-feature:nth-of-type(even) {
+    position: relative;
+    top: 4em;
+  }
+
+  #star-image {
+    width: 50%;
+    margin: auto;
   }
 }

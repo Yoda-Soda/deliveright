@@ -469,6 +469,8 @@ p {
   .card-feature h3 {
     text-align: left;
     font-size: 0.9em;
+    width: 14ch;
+    padding: 0 1em;
   }
 
   h2 {
@@ -484,7 +486,7 @@ p {
     font-size: 0.8em;
     line-height: 2em;
     position: relative;
-    top: -17vw;
+    top: -19vw;
   }
 
   .arrow-btn {
@@ -495,7 +497,7 @@ p {
     padding: 0.8em;
     margin: 2em;
     position: relative;
-    top: -17vw;
+    top: -19vw;
   }
   .features h2 {
     width: 10ch;

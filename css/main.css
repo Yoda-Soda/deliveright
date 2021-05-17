@@ -130,7 +130,8 @@ header,
   grid-template-rows: auto 67vw 1fr;
   grid-template-areas:
     "call_to_action"
-    "call_to_action_image";
+    "call_to_action_image"
+    "buttons";
 }
 
 .calltoaction h1 {
@@ -148,6 +149,7 @@ header,
 }
 
 .btn-section {
+  grid-area: buttons;
   background-color: white;
   padding-top: 18vw;
 }
@@ -245,7 +247,7 @@ p {
   width: 85vw;
   margin: 2em;
   padding: 3em;
-  box-shadow: rgba(46, 93, 221, 0.2) 0px 18px 50px -10px;
+  box-shadow: rgba(46, 93, 221, 0.1) 0px 18px 50px -10px;
   border-radius: 30px;
 }
 

@@ -242,7 +242,8 @@ p {
 }
 
 .card-feature {
-  width: 100vw;
+  width: 85vw;
+  margin: 2em;
   padding: 3em;
   box-shadow: rgba(46, 93, 221, 0.2) 0px 18px 50px -10px;
   border-radius: 30px;

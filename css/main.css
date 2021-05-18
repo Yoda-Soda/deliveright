@@ -17,16 +17,21 @@ body {
   width: 100vw;
 }
 
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;
+  background: var(--main-color);
 }
 
 #logo {
   font-weight: 700;
   font-size: 1.5em;
   color: white;
-  margin-left: 3vw;
 }
 
 /* remove navigation menu while in mobile and not open */
@@ -166,7 +171,7 @@ header,
   font-size: 1.3em;
   color: var(--gray-color);
   display: block;
-  margin: 0.8em;
+  margin: 0.8em 2em;
   text-align: center;
 }
 
@@ -174,7 +179,6 @@ header,
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
   color: white;
-  top: 4em;
 }
 
 .calltoaction img {
@@ -197,41 +201,41 @@ header,
 .features {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto repeat(3, 1fr);
   grid-template-areas:
     "heading"
-    "paragraph"
-    "arrow"
     "food-card"
     "scooter-card"
     "review-card";
 }
 
-h2 {
+.feature-header {
   grid-area: heading;
-  font-size: 2rem;
-  margin: 1em;
-  width: 10ch;
-  line-height: 1.4em;
+  margin: 0 1em;
+}
+
+h2 {
+  font-size: 2.7rem;
+  margin: 0.6em;
+  line-height: 1.2em;
   color: var(--dark-gray-font-color);
+  padding: 0 1em 0 0;
 }
 
 p {
-  grid-area: paragraph;
   padding: 0 2.3em;
-  width: 90vw;
   color: var(--gray-light-color);
   font-weight: 500;
   line-height: 1.8em;
 }
 
 .arrow-btn {
-  grid-area: arrow;
+  display: block;
   background-color: var(--secondary-color);
-  width: 90px;
+  width: 5rem;
   border-radius: 100px;
   padding: 1em;
-  margin: 2em auto;
+  margin: 3em auto;
 }
 
 .card-feature:nth-child(1) {
@@ -246,7 +250,6 @@ p {
 }
 
 .card-feature {
-  width: 85vw;
   margin: 2em;
   padding: 3em;
   box-shadow: rgba(46, 93, 221, 0.1) 0px 18px 50px -10px;
@@ -288,8 +291,7 @@ p {
     width: auto;
     height: 3.3em;
     text-align: center;
-    margin: 0 0.4em;
-    z-index: 2;
+    margin: 1em 1em;
   }
 
   .btn:hover {
@@ -320,11 +322,9 @@ p {
   }
 
   .calltoaction img {
-    width: 100vw;
+    width: 90vw;
     padding: 2em;
-    margin: 10vw auto;
-    position: relative;
-    top: -100px;
+    margin: 1vw auto;
   }
 
   .features {
@@ -336,40 +336,34 @@ p {
     width: 30ch;
   }
   .features {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
       "heading      heading         heading"
-      "paragraph    paragraph       paragraph"
-      "arrow        arrow           arrow"
       "food-card    scooter-card    review-card";
   }
   .card-feature {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 0.5em;
+    margin: 2em;
     padding: 1.4em;
-    width: calc((100vw - 6em) / 3);
+    width: 85%;
   }
 }
 
 /* break point for full screen browser */
 @media only screen and (min-width: 1080px) {
   .calltoaction {
-    grid-template-columns: auto 440px 60vw auto;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 10em 7em 12em;
     grid-template-areas:
-      ".    call_to_action               call_to_action_image   ."
-      ".    call_to_action_paragraph     call_to_action_image   ."
-      ".    buttons                      call_to_action_image   .";
+      "call_to_action               call_to_action_image"
+      "call_to_action_paragraph     call_to_action_image"
+      "buttons                      call_to_action_image";
   }
 
   .calltoaction img {
-    max-width: 33em;
-    justify-items: start;
+    width: 35rem;
     padding: 1em;
-    margin: 16em auto 0 7vw;
+    margin: 8em auto;
     padding: 0;
   }
 
@@ -386,7 +380,6 @@ p {
   }
 
   .calltoaction h1 {
-    width: 500px;
     padding: 1em 0 0 5vw;
     font-size: 2.6em;
   }
@@ -400,7 +393,6 @@ p {
     display: grid;
     grid-template-columns: repeat(6, auto);
     justify-items: center;
-    margin-right: 10vw;
   }
 
   .menu-list li {
@@ -444,17 +436,14 @@ p {
   }
   .features {
     padding: 3em 0em;
-    margin: 2.5em 3.4vw;
+    margin: 2.5em 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "heading    food-card   scooter-card    review-card"
-      "paragraph  food-card   scooter-card    review-card"
-      "arrow      food-card   scooter-card    review-card";
+    grid-template-rows: auto;
+    grid-template-areas: "heading    food-card   scooter-card    review-card";
+    justify-items: stretch;
   }
 
   .card-feature {
-    max-width: 20vw;
     margin: 1em;
     padding: 2.6em 1em;
     box-shadow: rgba(46, 93, 221, 0.1) 0px 18px 50px -10px;
@@ -464,6 +453,7 @@ p {
   .card-feature img {
     width: 90%;
     padding: 2em 0;
+    margin: auto;
   }
 
   .card-feature h3 {
@@ -480,13 +470,10 @@ p {
   }
 
   .features p {
-    padding: 0 2em;
-    width: 20vw;
+    padding: 0 1em;
     font-weight: 500;
     font-size: 0.8em;
     line-height: 2em;
-    position: relative;
-    top: -19vw;
   }
 
   .arrow-btn {
@@ -495,9 +482,7 @@ p {
     width: 50px;
     border-radius: 100px;
     padding: 0.8em;
-    margin: 2em;
-    position: relative;
-    top: -19vw;
+    margin: 2em 1em;
   }
   .features h2 {
     width: 10ch;

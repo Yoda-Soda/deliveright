@@ -23,9 +23,12 @@ body {
 }
 
 header {
+  background: var(--main-color);
+}
+
+#top-header {
   display: flex;
   justify-content: space-between;
-  background: var(--main-color);
 }
 
 #logo {
@@ -130,7 +133,7 @@ header,
 
 /* Call to action grid */
 
-.calltoaction {
+.calltoaction .container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 67vw 1fr;
@@ -140,7 +143,7 @@ header,
     "buttons";
 }
 
-.calltoaction h1 {
+h1 {
   grid-area: call_to_action;
   width: 15ch;
   color: white;
@@ -268,7 +271,7 @@ p {
 
 /* break point for tablets */
 @media only screen and (min-width: 768px) {
-  .calltoaction {
+  .calltoaction .container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto 53vw;
     grid-template-areas:
@@ -351,7 +354,7 @@ p {
 
 /* break point for full screen browser */
 @media only screen and (min-width: 1080px) {
-  .calltoaction {
+  .calltoaction .container {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 10em 7em 12em;
     grid-template-areas:
@@ -369,18 +372,18 @@ p {
 
   .btn-section {
     justify-items: center;
-    padding: 0.8em 0 4em 3vw;
-    margin: 1em 0 0 2vw;
+    padding: 0.8em 0 4em 0;
+    margin: 0 0 0 0;
   }
 
   .calltoaction p {
     font-size: 0.7em;
     max-width: 63ch;
-    padding: 5em 6em 0em 5vw;
+    padding: 5em 6em 0 0;
   }
 
   .calltoaction h1 {
-    padding: 1em 0 0 5vw;
+    padding: 1em 0 0 0;
     font-size: 2.6em;
   }
 
